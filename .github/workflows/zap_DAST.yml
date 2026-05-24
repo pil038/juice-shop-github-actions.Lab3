@@ -1,3 +1,4 @@
+# DAST scan using OWASP ZAP
 name: DAST
 on:
   push:
@@ -18,18 +19,4 @@ jobs:
         uses: zaproxy/action-baseline@v0.14.0
         with:
           target: 'https://demo.owasp-juice.shop'
-          cmd_options: '-a'
-          report_html: 'report.html'
-          report_md: 'report.md'
-          report_json: 'report.json'
-
-      - name: Upload ZAP Reports
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: zap-reports
-          path: |
-            report.html
-            report.md
-            report.json
-            #
+          cmd_options: '-a -r report.html -w report.md -J report.json'
