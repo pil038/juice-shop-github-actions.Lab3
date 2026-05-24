@@ -1,5 +1,4 @@
 name: DAST
-
 on:
   push:
     branches:
@@ -7,15 +6,12 @@ on:
   pull_request:
     branches:
       - master
-
 permissions:
   pull-requests: write
   issues: write
-
 jobs:
   zap_scan:
     runs-on: ubuntu-latest
-
     name: Scan the web applications
     steps:
       - name: ZAP Scan
@@ -23,3 +19,16 @@ jobs:
         with:
           target: 'https://demo.owasp-juice.shop'
           cmd_options: '-a'
+          report_html: 'report.html'
+          report_md: 'report.md'
+          report_json: 'report.json'
+
+      - name: Upload ZAP Reports
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: zap-reports
+          path: |
+            report.html
+            report.md
+            report.json
