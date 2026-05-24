@@ -48,7 +48,7 @@ Error: Issues has been disabled in this repository.
 ---
 
 ## Крок 6: Доопрацювання workflow — додавання збереження звітів
-Оновлено файл `zap_DAST.yml`: додано крок `Upload ZAP Reports` для збереження звітів як GitHub Actions Artifacts. Використано стандартні імена файлів які ZAP генерує автоматично: `report.html`, `report.md`, `report.json`.
+Оновлено файл `zap_DAST.yml`: додано крок генерації звітів для збереження як GitHub Actions Artifacts. Використано стандартні імена файлів які ZAP генерує автоматично: `report.html`, `report.md`, `report.json`.
 
 ![Крок 6](screenshots/8.png)
 
