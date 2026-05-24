@@ -120,9 +120,9 @@ ZAP просканував **158 URL** на `https://demo.owasp-juice.shop` та
 | Рівень ризику | Кількість алертів |
 |---|---|
 | 🔴 High | 0 |
-| 🟡 Medium | 2 |
-| 🔵 Low | 7 |
-| ⚪ Informational | 9 |
+| 🟠 Medium | 2 |
+| 🟡 Low | 7 |
+| 🔵 Informational | 9 |
 | **Всього** | **18** |
 
 ![Крок 10](screenshots/14.png)
